@@ -1,23 +1,31 @@
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@chakra-ui/react";
+import { AboutMe } from "../views/AboutMe";
+import { Projects } from "../views/Projects";
 
-export const NavBar = () => (
-  <Tabs>
-    <TabList>
-      <Tab>One</Tab>
-      <Tab>Two</Tab>
-      <Tab>Three</Tab>
-    </TabList>
+export function NavBar() {
+  return (
+    <Tabs>
+      <TabList>
+        <Tab>About Me</Tab>
+        <Tab>Projects</Tab>
+        <Tab>CV</Tab>
+        <Tab>Contact</Tab>
+      </TabList>
 
-    <TabPanels>
-      <TabPanel>
-        <p>one!</p>
-      </TabPanel>
-      <TabPanel>
-        <p>two!</p>
-      </TabPanel>
-      <TabPanel>
-        <p>three!</p>
-      </TabPanel>
-    </TabPanels>
-  </Tabs>
-);
+      <TabPanels>
+        <TabPanel>
+          <AboutMe />
+        </TabPanel>
+        <TabPanel>
+          <Projects />
+        </TabPanel>
+        <TabPanel>
+          <p>CV</p>
+        </TabPanel>
+        <TabPanel>
+          <p>Contact</p>
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
+  );
+}
